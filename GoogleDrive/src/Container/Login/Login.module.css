@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cc{
+    /* border: 2px solid green; */
+background-color: #f7f9fc;
+margin-bottom: 12px;
+display: flex;
+flex-direction: row;
+/* gap: 8px; */
+align-items: center;
+justify-content: space-between;
+padding-left: 20px;
+padding-top: 5px;
+padding-bottom: 25px;
+padding-right: 10px;
+}
+
+.logo{
+    height: 2rem;
+    width: 2.5rem;
+    
+    /* border: 1px solid red; */
+}
+
+.subcc{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 30px;
+}
+.drive{
+    font-size: 1.5rem;
+    padding-right: 50px;
+    color: #454746;
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.btn{
+     width: 8rem;
+     height: 3rem;
+     font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+    color: white;
+    background-color: #3b82f5;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btncontainer{
+    margin-right: 40px;
+    margin-top: 15px;
+}
+
+.subcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.subsubc{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+
+    padding-left: 50px;
+}
+.ccc{
+    width: 50%;
+}
+.imgl{
+    width: 40rem;
+    height: 35rem;
+}
+.h3h{
+    font-size: 50px;
+}
+.spn{
+    font-size: 25px;
+    color: #72727a;
+}
