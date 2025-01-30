@@ -102,7 +102,7 @@ const Header = () => {
           <div className={Styles.profileContainer} onClick={toggleDropdown}>
             <span className={Styles.profile}>
               {userCtx.user?.displayname &&
-                `${userCtx.user.displayname.split(" ")[0][0]} ${userCtx.user.displayname.split(" ")[1][0]}`}
+                `${userCtx.user.displayname.split(" ")[0][0]} `}
             </span>
             {dropdownVisible && (
               <div className={Styles.dropdownMenu}>
