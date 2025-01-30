@@ -6,6 +6,8 @@ import Layout from '../src/Container/Layout/Layout'
 // import Sidebar from './Components/Sidebar/Sidebar'
 import AddNewFile from '../src/Components/AddNewFile/AddNewFile'
 import Login from './Container/Login/Login'
+import Chat from './Components/chat/Chat'
+import Mystate from './Components/Contaxt/Mystate'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -17,11 +19,16 @@ function App() {
   },
 
   {
-    path: "/login",
+    path: "/chat",
+    element: < Chat/>
+},
+
+  {
+    path: "/",
     element: < Login/>
 },
   {
-    path: "/",
+    path: "",
     element: <Layout />,
     children: [
       {
@@ -39,9 +46,23 @@ function App() {
  });
   return (
     <>
-    <UserContext.Provider value={{user,setUser}}>
-    <RouterProvider router={router} />
-    </UserContext.Provider>
+      
+      <Mystate>
+
+
+      <UserContext.Provider value={{user,setUser}}>
+
+
+         <RouterProvider router={router} />
+
+
+       </UserContext.Provider>
+
+      </Mystate>
+
+
+
+   
     
     </>
   )

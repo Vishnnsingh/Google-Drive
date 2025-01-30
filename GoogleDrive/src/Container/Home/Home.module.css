@@ -222,3 +222,65 @@
   width: 25%;
   height: 30%;
 }
+
+
+.gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three files per row */
+  gap: 16px; /* Space between grid items */
+  padding: 16px;
+  overflow-x: auto; /* Allow horizontal scrolling for more items */
+  /* border: 2px solid red; */
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.gridItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gridImage {
+  width: 100%; /* Ensures image fits within the grid item */
+  height: auto; /* Maintains aspect ratio */
+  max-height: 120px; /* Restricts image height */
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+.gridItem span {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  word-break: break-word;
+}
+
+.chaat{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  /* margin-right: 20px;
+   */
+  /* padding-left: 20px */
+  /* padding: 50px; */
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .gridcontainer {
+    grid-template-columns: 1fr; /* One file per row on smaller screens */
+  }
+}

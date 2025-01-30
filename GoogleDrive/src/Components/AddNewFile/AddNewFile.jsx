@@ -1,86 +1,134 @@
+// import React, { useContext, useState } from "react";
+// import Styles from "./AddNewFile.module.css";
+// import myContext from "../Contaxt/MyContaxt";
 
-import React, { useState } from "react";
-import axios from "axios";
-import Styles from "../AddNewFile/AddNewFile.module.css";
+// const AddNewFile = ({ onUploadComplete }) => {
+
+//   const [isVisible, setIsVisible] = useState(true);  // Modal is visible initially
+
+//   const Ctx = useContext(myContext);
+//   const { eventhandle } = Ctx;
+//   console.log(Ctx);
+
+//   const [file, setFile] = useState(null);
+
+//   const handleFileChange = (e) => {
+//     setFile(e.target.files[0]);
+//     eventhandle(e);  // Calling eventhandle when file is selected
+//   };
+
+//   const handleFileUpload = () => {
+//     if (!file) {
+//       alert("Please select a file first.");
+//       return;
+//     }
+
+//     // Simulating upload process (or actual upload logic here)
+//     // setTimeout(() => {
+//     console.log("File uploaded successfully!");
+    
+//     // Call the provided callback function to notify parent about upload completion
+//     onUploadComplete();
+
+//     // Hide the modal after upload
+//     setIsVisible(false);  // Close the modal
+//     // }, 2000);
+//   };
+
+//   return (
+//     <>
+//       {isVisible && (
+//         <div className={Styles.modalOverlay}>
+//           <div className={Styles.modalContent}>
+//             <h2>Upload File</h2>
+//             <input type="file" onChange={handleFileChange} />
+//             <button onClick={handleFileUpload} className={Styles.closeButton}>
+//               Upload
+//             </button>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
+// };
+
+// export default AddNewFile;
+
+
+
+
+import React, { useContext, useState } from "react";
+import Styles from "./AddNewFile.module.css";
+import myContext from "../Contaxt/MyContaxt";
 
 const AddNewFile = ({ onUploadComplete }) => {
-  const [upload, setUpload] = useState(null);
-  const [fileDetails, setFileDetails] = useState(null); // Store file details
-  const [isUploading, setIsUploading] = useState(false); // Track uploading status
-  const [showModal, setShowModal] = useState(false); // Modal visibility
+  const [isVisible, setIsVisible] = useState(true);  // Modal is visible initially
+  const [file, setFile] = useState(null);
 
-  const eventhandle = async (e) => {
-    const file = e.target.files[0]; // Directly get the file
+  const Ctx = useContext(myContext);
+  const { eventhandle } = Ctx;  // Retrieve eventhandle from context
 
-    if (!file) return; // If no file is selected, do nothing
-
-    // Set file details before upload
-    setFileDetails({
-      name: file.name, // Original file name
-      size: (file.size / 1024).toFixed(2) + " KB", // File size in KB
-      lastModified: new Date(file.lastModified).toLocaleString(), // Last modified date
-    });
-
-    const data = new FormData();
-    data.append("file", file); // Append the selected file to the FormData
-    data.append("upload_preset", "GoogleCludeClone");
-    data.append("cloud_name", "deozxwmrx");
-
-    // Start uploading process
-    setIsUploading(true);
-
-    try {
-      const res = await axios.post(
-        "https://api.cloudinary.com/v1_1/deozxwmrx/image/upload",
-        data
-      );
-
-      console.log(res.data); // Log the entire response object to see the structure
-      if (onUploadComplete && res.data.url) {
-        onUploadComplete(res.data);
-        console.log("Uploaded Image URL: ", res.data.url); // Log the specific URL if it exists
-      }
-
-      // Stop uploading after successful upload
-      setIsUploading(false);
-      setShowModal(false); // Close modal after successful upload
-    } catch (error) {
-      console.error("Error uploading image:", error);
-      setIsUploading(false); // Stop uploading on error
+  // Ensure the file is set correctly when the user selects a file
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      setFile(selectedFile);  // Update file state
+      console.log("File selected:", selectedFile);
+    } else {
+      console.log("No file selected.");
+    }
+    // Call eventhandle only if there is a file selected
+    if (selectedFile) {
+      eventhandle(e);  // Calling eventhandle when file is selected
     }
   };
 
-  const handleUploadClick = () => {
-    // Trigger file input when the upload button is clicked
-    document.getElementById("fileInput").click();
+  const handleFileUpload = () => {
+    if (!file) {
+      alert("Please select a file first.");
+      return;
+    }
+
+    // Simulating upload process (or actual upload logic here)
+    console.log("File uploaded successfully!");
+
+    // Call the provided callback function to notify parent about upload completion
+    onUploadComplete();
+
+    // Hide the modal after upload
+    setIsVisible(false);  // Close the modal
   };
 
   return (
-    <div>
-      <button onClick={() => setShowModal(true)}>Upload File</button>
-
-      {showModal && (
+    <>
+      {isVisible && (
         <div className={Styles.modalOverlay}>
           <div className={Styles.modalContent}>
             <h2>Upload File</h2>
-            <input
-              type="file"
-              id="fileInput"
-              style={{ display: "none" }}
-              onChange={eventhandle}
-            />
-            <button onClick={handleUploadClick} disabled={isUploading}>
-              {isUploading ? "Uploading..." : "Choose File"}
-            </button>
-
-            <button onClick={() => setShowModal(false)} className={Styles.closeButton}>
-              Close
+            <input type="file" onChange={handleFileChange} />
+            <button onClick={handleFileUpload} className={Styles.closeButton}>
+              Upload
             </button>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
 export default AddNewFile;
+
+
+
+// const Pop = (props)=> {
+//   return(
+//     <>
+       
+//     </>
+//   )
+// }
+
+
+{/* {
+      isVisible ? <Pop handleFileUpload = {handleFileUpload} handleFileChange = {handleFileChange} /> : null
+     } */}

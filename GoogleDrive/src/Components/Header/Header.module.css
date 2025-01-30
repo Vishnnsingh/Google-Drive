@@ -153,3 +153,52 @@ margin-bottom: 12px;
     /* background-color: blue; */
     cursor: pointer;
 }
+
+
+.dropdownMenu{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    width: 10rem;
+    gap: 10px;
+    position: fixed;
+    right: 15px;
+    padding: 5px;
+    background-color: #dfe2df;
+    border-radius: 5px;
+}
+
+.logout{
+    width: 4rem;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.logout:hover{
+    background-color: green;
+}
+
+.vv{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 25px;
+    margin-left: 15px;
+}
+
+.profiless{
+    /* border: 1px solid green; */
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: black;
+    /* background-color: blue; */
+    cursor: pointer;
+}

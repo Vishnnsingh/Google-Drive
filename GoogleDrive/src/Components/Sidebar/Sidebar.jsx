@@ -10,18 +10,23 @@ import {
 } from "react-icons/ri";
 import { FaComputer, FaRegClock, FaRegStar } from "react-icons/fa6";
 import AddNewFile from "../AddNewFile/AddNewFile";
-
+import myContext from "../Contaxt/MyContaxt";
 
 const Sidebar = () => {
 
+
+  
   // const [showModal, setShowModal] = useState(false); // Modal visibility
+
+  // const [addFileOpen, setAddFileOpen] =useState(false)
 
   return (
 
     <>
     <div className={Styles.conatiner}>
-      <div className={Styles.plus}>
-        <AddNewFile/>
+      <div className={Styles.plus}  >
+        {/* <AddNewFile/> */}
+       
         <FaPlus />
         <span>New</span>
       </div>
