@@ -10,19 +10,25 @@
  
 }
 
-.conatiner {
+.containerss {
   /* border: 2px solid red; */
-  width: 20rem;
+  /* position: fixed; */
+  /* top: 4rem; */
+  /* left: 0; */
+  width: 17rem;
   height: 100%;
-  overflow: auto;
+  /* overflow: auto; */
   background-color: #f7f9fc;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
   align-items: start;
-  justify-content: center;
+  padding-top: 20px;
+  /* justify-content: space-between; */
   padding-left: 20px;
+  /* margin-top: 70px; */
+  padding-bottom: 100px;
 }
 
 .plus:hover{
@@ -31,6 +37,7 @@
 }
 .plus {
   /* border: 2px solid blue; */
+  width: 8rem;
   padding: 20px;
   display: flex;
   flex-direction: row;
@@ -40,14 +47,20 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   background-color: white;
   border: 1px solid rgb(208, 204, 204);
+  margin-left: 15px;
+  /* position: fixed; */
 }
 .subcontainer {
   display: flex;
+  /* position: fixed; */
+  /* margin-top: 0; */
+  /* top: 20rem; */
   flex-direction: column;
   align-items: start;
   justify-content: space-between;
   gap: 20px;
   margin-left: 15px;
+  /* margin-top: 20rem; */
 }
 
 .conatainerOne {
@@ -112,6 +125,15 @@
 .get:hover{
     background-color: #cdd8efbf;
     cursor: pointer;
+}
+
+.containerFourth{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  margin-left: 15px;
 }
 
 

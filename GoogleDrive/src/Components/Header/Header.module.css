@@ -9,7 +9,14 @@
 }
 .headerContainerr{
 background-color: #f7f9fc;
-margin-bottom: 12px;
+
+/* border: 2px solid red; */
+/* margin-bottom: 12px; */
+/* position: fixed; */
+/* top: 0;
+left: 0;
+right: 0; */
+
 }
 
 .imgheader{
