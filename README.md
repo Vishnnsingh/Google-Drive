@@ -47,12 +47,14 @@ This is a Google Drive clone application built with React, featuring Google Auth
 
 ## Photos and Links
 
-![App Login](public/images/Login.png)
-![App Home](public/images/Home.png)
-![App uploadFile](public/images/uploadFile.png)
-![App AfterUploading](public/images/AfterUploading.png)
-![App grid](public/images/grid.png)
-![App chat](public/images/chat.png)
+
+![App Login](GoogleDrive/public/images/Login.png)
+![App Home](GoogleDrive/public/images/Home.png)
+![App uploadFile](GoogleDrive/public/images/uploadFile.png)
+![App AfterUploading](GoogleDrive/public/images/AfterUploading.png)
+![App grid](GoogleDrive/public/images/grid.png)
+![App chat](GoogleDrive/public/images/chat.png)
+
 
 
 [Visit the live app](https://google-drive-ten-kappa.vercel.app/)
