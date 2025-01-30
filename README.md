@@ -33,7 +33,7 @@ This is a Google Drive clone application built with React, featuring Google Auth
 
 4. Start the development server:
     ```bash
-    npm start
+    npm run dev
     ```
 
 5. Visit the app at [http://localhost:3000](http://localhost:3000).
