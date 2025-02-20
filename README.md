@@ -1,5 +1,5 @@
-# Google Drive Clone
-This is a Google Drive clone application built with React, featuring Google Authentication using Firebase, cloud storage integration with Cloudinary, drag-and-drop functionality, and an AI chat feature. The app allows users to upload, store, and manage their files with ease.
+# Digital Storage Hub
+This is a Digital Storage Hub application built with React, featuring Google Authentication using Firebase, cloud storage integration with Cloudinary, drag-and-drop functionality, and an AI chat feature. The app allows users to upload, store, and manage their files with ease.
 ## Features
 - Google Authentication using Firebase
 - Cloud Storage with Cloudinary API
